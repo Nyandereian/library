@@ -8,7 +8,7 @@ function Book(title, author, pages, read) {
 }
 
 Book.property.info = function () {
-  console.log(title + ' by ' + author + ', ' + pages + ' pages, ' + read '.')
+  console.log(title + ' by ' + author + ', ' + pages + ' pages, ' + read + '.');
 };
 
 function addBookToLibrary() {

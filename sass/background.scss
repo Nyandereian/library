@@ -1,0 +1,39 @@
+html {
+  background-color: $background;
+  overflow: hidden;
+}
+
+.motive {
+  background-attachment: fixed;
+  background-image: url("media/book-bg.png");
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 100vh;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: -100;
+}
+
+.main {
+  margin: 5rem 5rem 0 0;
+  min-height: calc(100vh - 5rem);
+  position: relative;
+  width: calc(100% - 5rem);
+}
+
+.title {
+  @include title-font;
+  top: -0.45em;
+  left: 3rem;
+  position: absolute;
+}
+
+.grid-wrapper {
+  background-color: $dark-transparant;
+  min-height: inherit;
+  position: relative;
+  width: 100%;
+}

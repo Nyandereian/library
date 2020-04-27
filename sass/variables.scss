@@ -1,0 +1,25 @@
+$background: #fffdf0;
+$main-dark: #3b524b;
+$main-light: #638c80;
+$white: #fff;
+
+$dark-transparant: rgba(99,140,128,0.2);
+$light-transparant: rgba(255,255,255,0.6);
+
+$breakpoints: (
+  "sm": ( min-width: 480px ),
+  "md": ( min-width: 768px ),
+  "lg": ( min-width: 992px ),
+  "xl": ( min-width: 1200px )
+) !default;
+
+@mixin respond-above($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    $breakpoint-value: map-get($breakpoints, $breakpoint);
+    @media #{inspect($breakpoint-value)} {
+      @content;
+    }
+  } @else {
+    @warn "Invalid breakpoint: #{$breakpoint}.";
+  }
+}

@@ -1,0 +1,218 @@
+// Shapes & Elements
+
+.white-sheet {
+  @include all-transition;
+  background-color: $light-transparant;
+  height: 100vh;
+  right: -100vw;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 10;
+}
+
+.form-shape {
+  @include all-transition;
+  position: absolute;
+  right: -300px;
+  top: 3rem;
+  z-index: 50;
+
+  @include respond-above('md') {
+    right: -470px;
+  }
+}
+
+.form-rectangle {
+  background-color: $main-light;
+  border-radius: 2px;
+  height: 45vh;
+  width: 300px;
+  @include respond-above('md') {
+    height: 60vh;
+    width: 470px;
+  }
+}
+
+.form-square {
+  left: -100px;
+  position: absolute;
+  top: 20px;
+}
+
+#lint {
+  height: 100px;
+  width: 135px;
+}
+
+#svg_1, #svg_2 {
+  fill: $main-light;
+}
+
+.cross-wrapper {
+  height: 100px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 135px;
+
+  a {
+    display: block;
+    height: 100px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+  }
+}
+
+#cross {
+  bottom: 20px;
+  height: 70px;
+  left: 35px;
+  position: absolute;
+  transform: rotate(0);
+  @include cross-transition;
+}
+
+
+//--------------------------------------------
+// Form
+
+.form-wrapper {
+  height: inherit;
+  padding: 50px;
+  position: relative;
+  width: inherit;
+}
+
+.form-wrapper-2 {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.form-title {
+  @include form-title-font;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.add-book-form {
+  label {
+    @include form-font;
+    display: block;
+    margin-right: 50px;
+    text-align: left;
+
+    &.radio-label {
+      margin: 0 15px;
+
+      @include respond-above('md') {
+        &:first-child {
+          margin-left: 25px;
+        }
+      }
+    }
+  }
+
+  input {
+    @include form-font;
+    background-color: $main-light;
+    border: $main-light;
+    border-bottom: 2px solid $white;
+    &:focus {
+      outline: none;
+    }
+    &[type="submit"] {
+      @include italic-form-font;
+      border: none;
+      margin-top: 20px;
+      text-align: center;
+    }
+  }
+}
+
+.radio-row {
+  justify-content: flex-start;
+}
+
+.radio-options {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.radio-label {
+  cursor: pointer;
+  position: relative;
+  margin: 0 15px;
+
+  input {
+    cursor: pointer;
+    height: 0;
+    opacity: 0;
+    position: absolute;
+    width: 0;
+
+    &:checked ~ .selection-mark:after {
+      display: block;
+    }
+  }
+
+  &:hover > .selection-mark:after{
+    display: block;
+  }
+}
+
+.selection-mark {
+  &:after {
+    background-image: url('media/zen-brush-symbol.svg');
+    content: "";
+    display: none;
+    height: 2.5rem;
+    position: absolute;
+    width: 2.5rem;
+  }
+
+  &#yes-mark:after {
+    left: -5px;
+    top: -2px;
+    @include respond-above('md') {
+      left: -8px;
+      top: -4px;
+    }
+  }
+
+  &#no-mark:after {
+    left: -4px;
+    top: -2px;
+    @include respond-above('md') {
+      left: -7px;
+      top: -4px;
+    }
+  }
+}
+
+
+
+.form-divider {
+  @include form-font;
+}
+
+.submit-row {
+  justify-content: center;
+  input:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}

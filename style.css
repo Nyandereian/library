@@ -1,0 +1,300 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+html {
+  font-size: 7px; }
+
+@media (min-width: 768px) {
+  html {
+    font-size: 12px; } }
+@font-face {
+  font-family: "Libre Baskerville";
+  font-style: normal;
+  font-weight: bold;
+  src: url("fonts/Libre_Baskerville/LibreBaskerville-bold.ttf") format("truetype"); }
+@font-face {
+  font-family: "Abhaya Libre";
+  font-style: normal;
+  font-weight: normal;
+  src: url("fonts/Abhaya_Libre/AbhayaLibre-Regular.ttf") format("truetype"); }
+@font-face {
+  font-family: "Abhaya Libre";
+  font-style: normal;
+  font-weight: bold;
+  src: url("fonts/Abhaya_Libre/AbhayaLibre-Bold.ttf") format("truetype"); }
+.white-sheet {
+  -webkit-transition: all, 0.4s ease-in-out;
+  -moz-transition: all, 0.4s ease-in-out;
+  -o-transition: all, 0.4s ease-in-out;
+  transition: all, 0.4s ease-in-out;
+  background-color: rgba(255, 255, 255, 0.6);
+  height: 100vh;
+  right: -100vw;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 10; }
+
+.form-shape {
+  -webkit-transition: all, 0.4s ease-in-out;
+  -moz-transition: all, 0.4s ease-in-out;
+  -o-transition: all, 0.4s ease-in-out;
+  transition: all, 0.4s ease-in-out;
+  position: absolute;
+  right: -300px;
+  top: 3rem;
+  z-index: 50; }
+  @media (min-width: 768px) {
+    .form-shape {
+      right: -470px; } }
+
+.form-rectangle {
+  background-color: #638c80;
+  border-radius: 2px;
+  height: 45vh;
+  width: 300px; }
+  @media (min-width: 768px) {
+    .form-rectangle {
+      height: 60vh;
+      width: 470px; } }
+
+.form-square {
+  left: -100px;
+  position: absolute;
+  top: 20px; }
+
+#lint {
+  height: 100px;
+  width: 135px; }
+
+#svg_1, #svg_2 {
+  fill: #638c80; }
+
+.cross-wrapper {
+  height: 100px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 135px; }
+  .cross-wrapper a {
+    display: block;
+    height: 100px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%; }
+
+#cross {
+  bottom: 20px;
+  height: 70px;
+  left: 35px;
+  position: absolute;
+  transform: rotate(0);
+  -webkit-transition: transform, 0.3s ease-out;
+  -moz-transition: transform, 0.3s ease-out;
+  -o-transition: transform, 0.3s ease-out;
+  transition: transform, 0.3s ease-out; }
+
+.form-wrapper {
+  height: inherit;
+  padding: 50px;
+  position: relative;
+  width: inherit; }
+
+.form-wrapper-2 {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%); }
+
+.form-title {
+  color: #fff;
+  font-family: "Abhaya Libre", Georgia, serif;
+  font-size: 3.44rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  text-align: center; }
+
+.form-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 20px 0; }
+
+.add-book-form label {
+  color: #fff;
+  font-family: "Abhaya Libre", Georgia, serif;
+  font-size: 2rem;
+  font-weight: normal;
+  display: block;
+  margin-right: 50px;
+  text-align: left; }
+  .add-book-form label.radio-label {
+    margin: 0 15px; }
+    @media (min-width: 768px) {
+      .add-book-form label.radio-label:first-child {
+        margin-left: 25px; } }
+.add-book-form input {
+  color: #fff;
+  font-family: "Abhaya Libre", Georgia, serif;
+  font-size: 2rem;
+  font-weight: normal;
+  background-color: #638c80;
+  border: #638c80;
+  border-bottom: 2px solid #fff; }
+  .add-book-form input:focus {
+    outline: none; }
+  .add-book-form input[type="submit"] {
+    font-family: "Abhaya Libre", Georgia, serif;
+    font-size: 2rem;
+    font-style: italic;
+    font-weight: normal;
+    color: #fff;
+    border: none;
+    margin-top: 20px;
+    text-align: center; }
+
+.radio-row {
+  justify-content: flex-start; }
+
+.radio-options {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start; }
+
+.radio-label {
+  cursor: pointer;
+  position: relative;
+  margin: 0 15px; }
+  .radio-label input {
+    cursor: pointer;
+    height: 0;
+    opacity: 0;
+    position: absolute;
+    width: 0; }
+    .radio-label input:checked ~ .selection-mark:after {
+      display: block; }
+  .radio-label:hover > .selection-mark:after {
+    display: block; }
+
+.selection-mark:after {
+  background-image: url("media/zen-brush-symbol.svg");
+  content: "";
+  display: none;
+  height: 2.5rem;
+  position: absolute;
+  width: 2.5rem; }
+.selection-mark#yes-mark:after {
+  left: -5px;
+  top: -2px; }
+  @media (min-width: 768px) {
+    .selection-mark#yes-mark:after {
+      left: -8px;
+      top: -4px; } }
+.selection-mark#no-mark:after {
+  left: -4px;
+  top: -2px; }
+  @media (min-width: 768px) {
+    .selection-mark#no-mark:after {
+      left: -7px;
+      top: -4px; } }
+
+.form-divider {
+  color: #fff;
+  font-family: "Abhaya Libre", Georgia, serif;
+  font-size: 2rem;
+  font-weight: normal; }
+
+.submit-row {
+  justify-content: center; }
+  .submit-row input:hover {
+    cursor: pointer;
+    text-decoration: underline; }
+
+html {
+  background-color: #fffdf0;
+  overflow: hidden; }
+
+.motive {
+  background-attachment: fixed;
+  background-image: url("media/book-bg.png");
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 100vh;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: -100; }
+
+.main {
+  margin: 5rem 5rem 0 0;
+  min-height: calc(100vh - 5rem);
+  position: relative;
+  width: calc(100% - 5rem); }
+
+.title {
+  color: #3b524b;
+  font-family: "Libre Baskerville", Georgia, serif;
+  font-size: 6.25rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  top: -0.45em;
+  left: 3rem;
+  position: absolute; }
+
+.grid-wrapper {
+  background-color: rgba(99, 140, 128, 0.2);
+  min-height: inherit;
+  position: relative;
+  width: 100%; }
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,84 @@
+html {font-size: 7px;}
+
+
+@include respond-above('md') {
+  html {font-size: 12px;}
+}
+
+
+@font-face {
+  font-family: "Libre Baskerville";
+  font-style: normal;
+  font-weight: bold;
+  src: url("fonts/Libre_Baskerville/LibreBaskerville-bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Abhaya Libre";
+  font-style: normal;
+  font-weight: normal;
+  src: url("fonts/Abhaya_Libre/AbhayaLibre-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Abhaya Libre";
+  font-style: normal;
+  font-weight: bold;
+  src: url("fonts/Abhaya_Libre/AbhayaLibre-Bold.ttf") format("truetype");
+}
+
+$main-font: "Abhaya Libre", Georgia, serif;
+
+@mixin title-font {
+  color: $main-dark;
+  font-family: "Libre Baskerville", Georgia, serif;
+  font-size: 6.25rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+@mixin header-font {
+  color: $main-light;
+  font-family: $main-font;
+  font-size: 2.625rem;
+  font-weight: bold;
+}
+
+@mixin body-font {
+  color: $main-dark;
+  font-family: $main-font;
+  font-size: 2rem;
+  font-weight: normal;
+}
+
+@mixin italic-font {
+  font-family: $main-font;
+  font-size: 2rem;
+  font-style: italic;
+  font-weight: normal;
+}
+
+@mixin italic-body-font {
+  @include italic-font;
+  color: $main-light;
+}
+
+@mixin form-title-font {
+  color: $white;
+  font-family: $main-font;
+  font-size: 3.44rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+@mixin form-font {
+  color: $white;
+  font-family: $main-font;
+  font-size: 2rem;
+  font-weight: normal;
+}
+
+@mixin italic-form-font {
+  @include italic-font;
+  color: $white;
+}
