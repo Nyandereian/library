@@ -35,8 +35,10 @@
     width: 2rem;
 
     @include respond-above('md') {
-      height: 1.5rem;
-      width: 1.5rem;
+      height: 2rem;
+      position: relative;
+      top: -1px;
+      width: 2rem;
     }
   }
 
@@ -73,6 +75,11 @@
 
   @include respond-above('md') {
     font-size: 1.5rem;
+    max-width: 70%;
+  }
+
+  @include respond-above('lg') {
+    font-size: 2rem;
   }
 }
 
@@ -127,6 +134,14 @@
 
   @include respond-above('md') {
     display: flex;
+  }
+
+  @include respond-above('lg') {
+    .title-head {
+      font-size: 3.5rem;
+      position: relative;
+      top: -5px;
+    }
   }
 
   .pages {

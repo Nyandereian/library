@@ -110,8 +110,10 @@ html {
     width: 2rem; }
     @media (min-width: 768px) {
       .check svg {
-        height: 1.5rem;
-        width: 1.5rem; } }
+        height: 2rem;
+        position: relative;
+        top: -1px;
+        width: 2rem; } }
   .check.unchecked svg {
     fill: white; }
   .check.checked svg {
@@ -135,7 +137,11 @@ html {
   font-size: 2rem; }
   @media (min-width: 768px) {
     .book-title {
-      font-size: 1.5rem; } }
+      font-size: 1.5rem;
+      max-width: 70%; } }
+  @media (min-width: 992px) {
+    .book-title {
+      font-size: 2rem; } }
 
 .right-info {
   align-items: flex-end;
@@ -183,6 +189,11 @@ html {
   @media (min-width: 768px) {
     .header-row {
       display: flex; } }
+  @media (min-width: 992px) {
+    .header-row .title-head {
+      font-size: 3.5rem;
+      position: relative;
+      top: -5px; } }
   .header-row .pages {
     position: relative;
     right: 61.2px; }
