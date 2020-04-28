@@ -128,7 +128,8 @@ html {
   @media (min-width: 768px) {
     .title-author {
       display: flex;
-      flex-direction: row; } }
+      flex-direction: row;
+      padding-left: 13px; } }
 
 .book-title {
   font-size: 2rem; }

@@ -64,6 +64,7 @@
   @include respond-above('md') {
     display: flex;
     flex-direction: row;
+    padding-left: 13px;
   }
 }
 
