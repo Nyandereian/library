@@ -1,6 +1,5 @@
 *.zip
 *OFL.txt
 *.DS_Store
-*.map
 *.sass-cache
 todo.txt
