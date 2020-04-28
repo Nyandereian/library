@@ -1,6 +1,5 @@
 *.zip
 *OFL.txt
-*.ttf
 *.DS_Store
 *.map
 *.sass-cache
