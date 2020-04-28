@@ -1,6 +1,10 @@
 html {
   background-color: $background;
+}
+
+.content-wrapper {
   overflow: hidden;
+  position: relative;
 }
 
 .motive {

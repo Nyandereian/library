@@ -259,8 +259,11 @@ html {
     text-decoration: underline; }
 
 html {
-  background-color: #fffdf0;
-  overflow: hidden; }
+  background-color: #fffdf0; }
+
+.content-wrapper {
+  overflow: hidden;
+  position: relative; }
 
 .motive {
   background-attachment: fixed;
