@@ -262,6 +262,8 @@ html {
   background-color: #fffdf0; }
 
 .content-wrapper {
+  overflow-x: hidden;
+  overflow-y: hidden;
   overflow: hidden;
   position: relative; }
 
