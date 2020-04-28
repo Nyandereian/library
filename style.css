@@ -46,7 +46,7 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-input, a, button {
+input, a, button, label {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -199,7 +199,8 @@ html {
   font-weight: normal;
   background-color: #638c80;
   border: #638c80;
-  border-bottom: 2px solid #fff; }
+  border-bottom: 2px solid #fff;
+  caret-color: #fff; }
   .add-book-form input:focus {
     outline: none; }
   .add-book-form input[type="submit"] {

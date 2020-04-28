@@ -134,6 +134,7 @@
     background-color: $main-light;
     border: $main-light;
     border-bottom: 2px solid $white;
+    caret-color: $white;
     &:focus {
       outline: none;
     }
