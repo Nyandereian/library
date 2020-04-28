@@ -27,7 +27,7 @@
 .form-rectangle {
   background-color: $main-light;
   border-radius: 2px;
-  height: 45vh;
+  height: 100vh;
   width: 300px;
   @include respond-above('md') {
     height: 60vh;
@@ -90,8 +90,12 @@
 .form-wrapper-2 {
   left: 50%;
   position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  top: 5%;
+  transform: translateX(-50%);
+  @include respond-above('md') {
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
 
 .form-title {
