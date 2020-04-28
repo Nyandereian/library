@@ -52,8 +52,7 @@ input, a, button, label {
   appearance: none;
   border-radius: 0;
   -webkit-tap-highlight-color: transparent;
-}
-
-input {
-
+  &:hover, &:focus {
+    outline: none;
+  }
 }

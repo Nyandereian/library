@@ -1,0 +1,127 @@
+.grid {
+  @include body-font;
+  padding: 6.25rem 3rem 0 3rem;
+}
+
+.grid-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  width: 90%;
+
+  @include respond-above ('md') {
+    width: 100%;
+  }
+}
+
+.left-info {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+}
+
+.check {
+  align-self: flex-start;
+  height: 3rem;
+  width: 3rem;
+
+  svg {
+    height: 2rem;
+    width: 2rem;
+
+    @include respond-above('md') {
+      height: 1.5rem;
+      width: 1.5rem;
+    }
+  }
+
+  &.unchecked svg {
+    fill: white;
+  }
+
+  &.checked svg {
+    fill: $main-dark;
+  }
+
+  &:hover {
+    cursor: pointer;
+    svg {
+      fill: $main-dark;
+    }
+  }
+}
+
+.title-author {
+  padding-left: 8px;
+  justify-content: space-between;
+  width: 90%;
+
+  @include respond-above('md') {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.book-title {
+  font-size: 2rem;
+
+  @include respond-above('md') {
+    font-size: 1.5rem;
+  }
+}
+
+.right-info {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 20%;
+
+  @include respond-above('md') {
+    align-items: flex-start;
+  }
+}
+
+.pages {
+  margin-right: 2rem;
+
+  p::after {
+    content: ' pp';
+  }
+}
+
+.delete {
+  button {
+    @include italic-body-font;
+    border: none;
+    background-color: transparent;
+    font-size: 1.5rem;
+    position: relative;
+    top: 3px;
+
+    &:hover {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+
+    @include respond-above('md') {
+      top: -2px;
+    }
+  }
+}
+
+.header-row {
+  @include body-font;
+  display: none;
+  font-size: 2.5rem;
+
+  @include respond-above('md') {
+    display: flex;
+  }
+
+  .pages {
+    position: relative;
+    right: 61.2px;
+  }
+}

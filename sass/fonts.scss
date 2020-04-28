@@ -10,21 +10,21 @@ html {font-size: 7px;}
   font-family: "Libre Baskerville";
   font-style: normal;
   font-weight: bold;
-  src: url("fonts/Libre_Baskerville/LibreBaskerville-bold.ttf") format("truetype");
+  src: url("fonts/LibreBaskerville-bold.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Abhaya Libre";
   font-style: normal;
   font-weight: normal;
-  src: url("fonts/Abhaya_Libre/AbhayaLibre-Regular.ttf") format("truetype");
+  src: url("fonts/AbhayaLibre-Regular.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Abhaya Libre";
   font-style: normal;
   font-weight: bold;
-  src: url("fonts/Abhaya_Libre/AbhayaLibre-Bold.ttf") format("truetype");
+  src: url("fonts/AbhayaLibre-Bold.ttf") format("truetype");
 }
 
 $main-font: "Abhaya Libre", Georgia, serif;
@@ -47,7 +47,7 @@ $main-font: "Abhaya Libre", Georgia, serif;
 @mixin body-font {
   color: $main-dark;
   font-family: $main-font;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: normal;
 }
 
@@ -60,7 +60,7 @@ $main-font: "Abhaya Libre", Georgia, serif;
 
 @mixin italic-body-font {
   @include italic-font;
-  color: $main-light;
+  color: $main-dark;
 }
 
 @mixin form-title-font {

@@ -52,6 +52,8 @@ input, a, button, label {
   appearance: none;
   border-radius: 0;
   -webkit-tap-highlight-color: transparent; }
+  input:hover, input:focus, a:hover, a:focus, button:hover, button:focus, label:hover, label:focus {
+    outline: none; }
 
 html {
   font-size: 7px; }
@@ -63,17 +65,121 @@ html {
   font-family: "Libre Baskerville";
   font-style: normal;
   font-weight: bold;
-  src: url("fonts/Libre_Baskerville/LibreBaskerville-bold.ttf") format("truetype"); }
+  src: url("fonts/LibreBaskerville-bold.ttf") format("truetype"); }
 @font-face {
   font-family: "Abhaya Libre";
   font-style: normal;
   font-weight: normal;
-  src: url("fonts/Abhaya_Libre/AbhayaLibre-Regular.ttf") format("truetype"); }
+  src: url("fonts/AbhayaLibre-Regular.ttf") format("truetype"); }
 @font-face {
   font-family: "Abhaya Libre";
   font-style: normal;
   font-weight: bold;
-  src: url("fonts/Abhaya_Libre/AbhayaLibre-Bold.ttf") format("truetype"); }
+  src: url("fonts/AbhayaLibre-Bold.ttf") format("truetype"); }
+.grid {
+  color: #3b524b;
+  font-family: "Abhaya Libre", Georgia, serif;
+  font-size: 1.5rem;
+  font-weight: normal;
+  padding: 6.25rem 3rem 0 3rem; }
+
+.grid-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  width: 90%; }
+  @media (min-width: 768px) {
+    .grid-row {
+      width: 100%; } }
+
+.left-info {
+  display: flex;
+  flex-direction: row;
+  width: 80%; }
+
+.check {
+  align-self: flex-start;
+  height: 3rem;
+  width: 3rem; }
+  .check svg {
+    height: 2rem;
+    width: 2rem; }
+    @media (min-width: 768px) {
+      .check svg {
+        height: 1.5rem;
+        width: 1.5rem; } }
+  .check.unchecked svg {
+    fill: white; }
+  .check.checked svg {
+    fill: #3b524b; }
+  .check:hover {
+    cursor: pointer; }
+    .check:hover svg {
+      fill: #3b524b; }
+
+.title-author {
+  padding-left: 8px;
+  justify-content: space-between;
+  width: 90%; }
+  @media (min-width: 768px) {
+    .title-author {
+      display: flex;
+      flex-direction: row; } }
+
+.book-title {
+  font-size: 2rem; }
+  @media (min-width: 768px) {
+    .book-title {
+      font-size: 1.5rem; } }
+
+.right-info {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 20%; }
+  @media (min-width: 768px) {
+    .right-info {
+      align-items: flex-start; } }
+
+.pages {
+  margin-right: 2rem; }
+  .pages p::after {
+    content: ' pp'; }
+
+.delete button {
+  font-family: "Abhaya Libre", Georgia, serif;
+  font-size: 2rem;
+  font-style: italic;
+  font-weight: normal;
+  color: #3b524b;
+  border: none;
+  background-color: transparent;
+  font-size: 1.5rem;
+  position: relative;
+  top: 3px; }
+  .delete button:hover {
+    cursor: pointer;
+    text-decoration: underline; }
+  @media (min-width: 768px) {
+    .delete button {
+      top: -2px; } }
+
+.header-row {
+  color: #3b524b;
+  font-family: "Abhaya Libre", Georgia, serif;
+  font-size: 1.5rem;
+  font-weight: normal;
+  display: none;
+  font-size: 2.5rem; }
+  @media (min-width: 768px) {
+    .header-row {
+      display: flex; } }
+  .header-row .pages {
+    position: relative;
+    right: 61.2px; }
+
 .white-sheet {
   -webkit-transition: all, 0.4s ease-in-out;
   -moz-transition: all, 0.4s ease-in-out;
@@ -305,7 +411,7 @@ html {
   font-weight: bold;
   text-transform: uppercase;
   top: -0.45em;
-  left: 3rem;
+  left: 7rem;
   position: absolute; }
 
 .grid-wrapper {
