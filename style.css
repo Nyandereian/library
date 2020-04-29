@@ -337,6 +337,12 @@ html {
   caret-color: #fff; }
   .add-book-form input:focus {
     outline: none; }
+  .add-book-form input[type="number"] {
+    box-sizing: border-box;
+    width: 128px; }
+    @media (min-width: 768px) {
+      .add-book-form input[type="number"] {
+        width: 212px; } }
   .add-book-form input[type="submit"] {
     font-family: "Abhaya Libre", Georgia, serif;
     font-size: 2rem;

@@ -138,6 +138,13 @@
     &:focus {
       outline: none;
     }
+    &[type="number"] {
+      box-sizing: border-box;
+      width: 128px;
+      @include respond-above('md') {
+        width: 212px;
+      }
+    }
     &[type="submit"] {
       @include italic-form-font;
       border: none;
