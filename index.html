@@ -29,42 +29,6 @@
               <div class="delete"></div>
             </div>
           </div>
-          <div class="grid-row">
-            <div class="left-info">
-              <div class="check unchecked">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18px" height="18px">
-                  <path d="M0 0h24v24H0z" fill="none"/>
-                  <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/>
-                </svg>
-              </div>
-              <div class="title-author">
-                <div class="book-title"><p>Harry Potter and the Philosopher's Stone</p></div>
-                <div class="author"><p>Catherynne M. Valenddddddddddddte</p></div>
-              </div>
-            </div>
-            <div class="right-info">
-              <div class="pages"><p>257</p></div>
-              <div class="delete"><button>Delete</button></div>
-            </div>
-          </div>
-          <div class="grid-row">
-            <div class="left-info">
-              <div class="check checked">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                  <path d="M0 0h24v24H0z" fill="none"/>
-                  <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/>
-                </svg>
-              </div>
-              <div class="title-author">
-                <div class="book-title"><p>The Persecution and Assassination of Jean-Paul Marat as Performed by the Inmates of the Asylum of Charenton Under the Direction of the Marquis de Sade</p></div>
-                <div class="author"><p>J.K. Rowling</p></div>
-              </div>
-            </div>
-            <div class="right-info">
-              <div class="pages"><p>257</p></div>
-              <div class="delete"><button>Delete</button></div>
-            </div>
-          </div>
         </div>
       </div>
     </main>
@@ -74,7 +38,7 @@
         <div class="form-wrapper">
           <div class="form-wrapper-2">
             <h2 class="form-title">Add book</h2>
-            <form class="add-book-form" action="">
+            <form class="add-book-form" method="post">
               <div class="form-row">
                 <label for="title">Title</label>
                 <input type="text" name="title" value="">
@@ -85,18 +49,18 @@
               </div>
               <div class="form-row">
                 <label for="pages">Pages</label>
-                <input type="number" name="pages" pattern="[0-9]*" inputmode="numeric" value="">
+                <input type="number" name="pages" pattern="\d" inputmode="numeric" value="" required>
               </div>
               <div class="form-row radio-row">
                 <label for="read">Read</label>
                 <div class="radio-options">
                   <label class="radio-label" for="yes">
-                    <input type="radio" name="read" id="yes">
+                    <input type="radio" name="read" id="yes" value="true">
                     <span id="yes-mark" class="selection-mark">Y</span>
                   </label>
                   <span class="form-divider"> | </span>
                   <label class="radio-label" for="no">
-                    <input type="radio" name="read" id="no">
+                    <input type="radio" name="read" id="no" value="false">
                     <span id="no-mark" class="selection-mark">N</span>
                   </label>
                 </div>
@@ -104,6 +68,7 @@
               <div class="form-row submit-row">
                 <input type="submit" value="Submit">
               </div>
+              <div class="validation-error"><p>*Please fill in all fields</p></div>
             </form>
           </div>
         </div>
@@ -133,7 +98,28 @@
       </div>
     </div>
   </div>
+
+  <template id="row-template">
+    <div class="grid-row">
+      <div class="left-info">
+        <div class="check">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/>
+          </svg>
+        </div>
+        <div class="title-author">
+          <div class="book-title"><p></p></div>
+          <div class="author"><p></p></div>
+        </div>
+      </div>
+      <div class="right-info">
+        <div class="pages"><p></p></div>
+        <div class="delete"><button>Delete</button></div>
+      </div>
+    </div>
+  </template>
 </body>
-<!-- <script src="library.js"></script> -->
+<script src="scripts/library.js"></script>
 <script src="scripts/animation.js"></script>
 </html>

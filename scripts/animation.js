@@ -7,6 +7,7 @@ cross.addEventListener('click', e => {
   (cross.style.transform == 'rotate(45deg)') ? pushOut() : pullIn();
 });
 
+
 whiteScreen.addEventListener('click', e => {
   if (cross.style.transform == 'rotate(45deg)') pushOut();
 });
@@ -21,4 +22,5 @@ function pushOut() {
   cross.style.transform = 'rotate(0)';
   whiteScreen.style.right = '-100vw';
   formShape.style.right = md.matches ? '-470px' : '-300px';
+  setTimeout(resetForm, 400);
 }

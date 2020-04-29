@@ -110,15 +110,15 @@ html {
   width: 3rem; }
   .check svg {
     height: 2rem;
-    width: 2rem; }
+    width: 2rem;
+    fill: #fff;
+    pointer-events: none; }
     @media (min-width: 768px) {
       .check svg {
         height: 2rem;
         position: relative;
         top: -1px;
         width: 2rem; } }
-  .check.unchecked svg {
-    fill: white; }
   .check.checked svg {
     fill: #3b524b; }
   .check:hover {
@@ -276,7 +276,7 @@ html {
   height: 70px;
   left: 35px;
   position: absolute;
-  transform: rotate(0);
+  transform: rotate(0deg);
   -webkit-transition: transform, 0.3s ease-out;
   -moz-transition: transform, 0.3s ease-out;
   -o-transition: transform, 0.3s ease-out;
@@ -403,6 +403,17 @@ html {
   .submit-row input:hover {
     cursor: pointer;
     text-decoration: underline; }
+
+.validation-error {
+  font-family: "Abhaya Libre", Georgia, serif;
+  font-size: 2rem;
+  font-style: italic;
+  font-weight: normal;
+  color: #fff;
+  bottom: -3rem;
+  display: none;
+  font-size: 1.5rem;
+  text-align: center; }
 
 html {
   background-color: #fffdf0; }

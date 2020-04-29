@@ -37,6 +37,8 @@
   svg {
     height: 2rem;
     width: 2rem;
+    fill: $white;
+    pointer-events: none;
 
     @include respond-above('md') {
       height: 2rem;
@@ -44,10 +46,6 @@
       top: -1px;
       width: 2rem;
     }
-  }
-
-  &.unchecked svg {
-    fill: white;
   }
 
   &.checked svg {
